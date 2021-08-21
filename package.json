@@ -11,12 +11,12 @@
     "url": "git+https://github.com/astelit/gulp-ocmode-refresh.git"
   },
   "keywords": [
-    "gulp",
-    "opencart",
-    "ocmode",
-    "extension",
-    "modifications",
-    "cache"
+    "Gulp",
+    "Opencart",
+    "Modification",
+    "Extensions",
+    "Refresh",
+    "ocmode cache clear"
   ],
   "author": {
     "name": "Gennady Mandretov",
