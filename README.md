@@ -29,7 +29,10 @@ function browsersync() {
 }
 
 function modificationRefresh() {
-    return src(['./system/storage/**/*.ocmod.xml', './system/storage/modification/catalog/view/theme/**/template/**/*.*'])
+    return src([
+        './system/storage/**/*.ocmod.xml',
+        './system/storage/modification/catalog/view/theme/**/template/**/*.*'
+    ])
         .pipe(ocmodRefresh({
             url: `http://${localhost}/admin/`,
             login: 'admin',
@@ -38,7 +41,10 @@ function modificationRefresh() {
 }
 
 function startwatch() {
-    watch([`catalog/**/*.{${fileswatch}}`], {usePolling: true}, modificationRefresh).on('change', browserSync.reload)
-}
+    watch(
+        [`catalog/**/*.{${fileswatch}}`],
+        {usePolling: true}, 
+        modificationRefresh
+    ).on('change', browserSync.reload)
 
 exports.default = series(parallel(browsersync, startwatch));

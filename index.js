@@ -8,9 +8,8 @@ let cookie_jar = request.jar();
 
 function getKey() {
     return new Promise((resolve, reject) => {
-        console.log('connecting to: ', options.url);
+        console.log('Connecting to: ', options.url);
         request({
-
             url: options.url,
             jar: cookie_jar,
             method: 'POST',
@@ -20,14 +19,11 @@ function getKey() {
             }
         })
             .on('response', (response) => {
-
                 if (typeof response.headers.location === 'undefined')
-                    reject("Can't get user token. Login or password incorrect");
-
+                    throw new Error("Can't get user token. Login or password incorrect!");
                 else {
                     resolve(getQueryParam('user_token', response.headers.location));
                 }
-
             })
             .on('error', (err) => {
                 reject(err);
