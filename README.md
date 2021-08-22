@@ -11,8 +11,11 @@ npm install gulp-ocmod-refresh --save-dev
 # Usage in gulpfile
 
 ```javascript
-let localhost  = 'localhost',
-    theme      = 'yourTheme',
+let localhost  = 'localhost',    // Your local domain
+    adminUrl   = 'admin'         // Path to admin
+    login      = 'yourLogin'     // Login to admin 
+    Ppassword  = 'yourPassword', // Ppassword to admin
+    theme      = 'yourTheme',    // Theme folder name 
     fileswatch = 'html,htm,php,js,css,txt,yaml,twig,json,md'
     
 const {src, dest, parallel, series, watch} = require('gulp')
@@ -34,7 +37,7 @@ function modificationRefresh() {
         './system/storage/modification/catalog/view/theme/**/template/**/*.*'
     ])
         .pipe(ocmodRefresh({
-            url: `http://${localhost}/admin/`,
+            url: `http://${localhost}/${adminUrl}/`,
             login: 'admin',
             password: 'password'
         }))

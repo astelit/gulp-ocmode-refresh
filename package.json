@@ -1,6 +1,6 @@
 {
   "name": "gulp-ocmod-refresh",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Gulp Plugin for refresh Extension > Modifications (OCMOD) cache in OpenCart 3.x.x.",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "name": "Gennady Mandretov",
     "email": "grimgrim240@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/astelit/gulp-ocmode-refresh/issues",
     "email": "grimgrim240@gmail.com"
