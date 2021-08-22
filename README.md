@@ -12,8 +12,8 @@ npm install gulp-ocmod-refresh --save-dev
 
 ```javascript
 let localhost      = 'localhost',    // Your local domain
-    adminUrl       = 'admin'         // Path to admin
-    adminLogin     = 'yourLogin'     // Admin login 
+    adminUrl       = 'admin',         // Path to admin
+    adminLogin     = 'yourLogin',     // Admin login 
     adminPassword  = 'yourPassword', // Admin password
     fileswatch     = 'html,htm,php,js,css,txt,yaml,twig,json,md'
     
